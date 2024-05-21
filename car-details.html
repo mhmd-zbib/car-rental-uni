@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 50px;
+      width: 100%;
+      background-color: #333;
+      padding: 10px 30px;
+      font-size: 18px;
+      color: #fff;
+    }
+
+    .logo {
+      margin-right: auto;
+    }
+
+    .heading {
+      display: flex;
+    }
+
+    .heading ul {
+      display: flex;
+      margin-left: auto;
+    }
+
+    .logo a {
+      color: #fff;
+      transition-duration: 1s;
+      font-weight: 600;
+      font-size: 25px;
+      text-decoration: none;
+    }
+
+    .logo a:hover {
+      color: rgb(240, 6, 6);
+      transition-duration: 1s;
+    }
+
+    .heading ul li {
+      list-style: none;
+    }
+
+    .heading ul li a {
+      text-decoration: none;
+      font-weight: 500;
+      position: relative;
+      color: #fff;
+      margin: 0 14px;
+      font-size: 18px;
+      transition-duration: 1s;
+    }
+
+    .heading ul li a:hover {
+      color: rgb(240, 6, 6);
+      transition-duration: 1s;
+    }
+
+    .heading ul li a::before {
+      content: "";
+      height: 2px;
+      width: 0px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: white;
+      transition-duration: 1s;
+    }
+
+    .heading ul li a:hover::before {
+      width: 100%;
+      transition-duration: 1s;
+      background-color: rgb(240, 6, 6);
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 10px;
+      bottom: 0;
+    }
+
+    .car-details {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .car-details img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Car Rental.</a></div>
+
+    <div class="heading">
+      <ul>
+        <li><a href="index.html" class="under">HOME</a></li>
+        <li><a href="cars.html" class="under">CARS</a></li>
+        <li><a href="about.html" class="under">ABOUT</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+  <section id="car-details" class="car-details">
+    <h2 id="car-name">Car Name</h2>
+    <img id="car-image" src="" alt="Car Image">
+    <p id="car-price">Car Price</p>
+    <p id="car-description">Car Description</p>
+  </section>
+
+  <footer>
+    <p>CSCI 390 &copy; 2024 Car Rental</p>
+  </footer>
+
+  <script src="functions/carDetailsScript.js"></script>
+</body>
+
+</html>

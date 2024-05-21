@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background-color: #333;
+  padding: 10px 30px;
+  /* Adjusted padding for smaller screens */
+  font-size: 18px;
+  color: #fff;
+  flex-wrap: wrap;
+  /* Allow wrapping of flex items */
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.heading {
+  margin-left: auto;
+}
+
+.heading ul {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping of list items */
+}
+
+.logo a {
+  color: #fff;
+  transition-duration: 1s;
+  font-weight: 600;
+  font-size: 25px;
+  text-decoration: none;
+}
+
+.logo a:hover {
+  color: rgb(240, 6, 6);
+  transition-duration: 1s;
+}
+
+.heading ul li {
+  list-style: none;
+}
+
+.heading ul li a {
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+  color: #fff;
+  margin: 0 14px;
+  font-size: 18px;
+  transition-duration: 1s;
+}
+
+.heading ul li a:hover {
+  color: rgb(240, 6, 6);
+  transition-duration: 1s;
+}
+
+.heading ul li a::before {
+  content: "";
+  height: 2px;
+  width: 0px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background-color: white;
+  transition-duration: 1s;
+}
+
+.heading ul li a:hover::before {
+  width: 100%;
+  transition-duration: 1s;
+  background-color: rgb(240, 6, 6);
+}
+
+.dotted-list {
+  list-style-type: none;
+}
+
+.dotted-list li:before {
+  content: "\2022";
+  position: absolute;
+  margin-left: -15px;
+  margin-top: -2px;
+  font-size: 20px;
+  color: #333;
+}
+
+.dotted-list li {
+  position: relative;
+  padding-left: 20px;
+}
+
+footer {
+  margin-top: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  bottom: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 10px 20px;
+    flex-direction: column;
+    /* Stack logo and navigation vertically */
+  }
+
+  .heading ul {
+    flex-direction: column;
+    /* Stack navigation items vertically */
+    align-items: center;
+    width: 100%;
+    /* Ensure full width */
+  }
+
+  .heading ul li {
+    margin: 5px 0;
+  }
+
+  .logo {
+    margin: 0 auto 10px auto;
+    /* Center logo with margin at the bottom */
+  }
+
+  .heading {
+    margin: 0;
+    /* Remove left margin */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo a {
+    font-size: 20px;
+    /* Adjust font size for smaller screens */
+  }
+
+  .heading ul li a {
+    font-size: 16px;
+    /* Adjust font size for smaller screens */
+    margin: 0 10px;
+    /* Reduce margin */
+  }
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Car Rental Website</title>
+  <link rel="stylesheet" href="styles/cars.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="logo"><a href="index.html">Car Rental.</a></div>
+
+    <div class="heading">
+      <ul>
+        <li><a href="index.html" class="under">HOME</a></li>
+        <li><a href="cars.html" class="under">CARS</a></li>
+        <li><a href="about.html" class="under">ABOUT</a></li>
+        <li><a href="contact.html" class="under">CONTACT US</a></li>
+      </ul>
+    </div>
+    <div class="heading1">
+      <ion-icon name="menu" class="ham"></ion-icon>
+    </div>
+  </header>
+
+  <section class="search">
+    <h2>Find Your Perfect Car</h2>
+    <form id="search-form">
+
+      <input type="text" placeholder="Search for cars...">
+
+      <button type="submit">
+        <span>Search</span>
+      </button>
+      
+    </form>
+  </section>
+
+  <section id="car-list" class="car-list">
+  </section>
+
+  <footer>
+
+    <p> CSCI 390 &copy; 2024 Car Rental </p>
+  </footer>
+
+  <script src="functions/carsScript.js"></script>
+</body>
+
+</html>
